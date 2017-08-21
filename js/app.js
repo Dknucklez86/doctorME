@@ -6,8 +6,10 @@ var Timeline = React.createClass({
         this.setState({editing: true})
     },
     save(){
-        var val = this.refs.newText.value
-        alert('Later we will save this value: ' + val)
+        var valTitle = this.refs.newTitle.value
+        var valNote = this.refs.newNote.value
+        alert('Later we will save this value: ' + valTitle)
+        alert('We will also save this value: ' + valNote)
         this.setState({editing: false})
     },
     remove(){
@@ -36,7 +38,7 @@ var Timeline = React.createClass({
                         <p>
                             <textarea ref="newNote"></textarea>
                         </p>
-                        <button onclick={this.save}> Save</button>
+                        <button onClick={this.save}> Save</button>
                     </div>
                 </li>
             </ul>
