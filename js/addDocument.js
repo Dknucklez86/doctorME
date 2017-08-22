@@ -8,8 +8,8 @@ var AddAppointment = React.createClass({
 
   handleAdd: function(e) {
     var tempItem = {
-      petName: this.refs.inputFirstName.value,
-      ownerName: this.refs.inputLastName.value,
+      firstName: this.refs.inputFirstName.value,
+      lastName: this.refs.inputLastName.value,
       aptDate: this.refs.inputAptDate.value + ' ' +
         this.refs.inputAptTime.value,
       aptNotes: this.refs.inputMedNotes.value
@@ -35,14 +35,14 @@ var AddAppointment = React.createClass({
               <label className="col-sm-2 control-label" htmlFor="firstName">First Name</label>
               <div className="col-sm-10">
                 <input type="text" className="form-control"
-                  id="petName" ref="inputFirstName" placeholder="First Name" />
+                  id="firstName" ref="inputFirstName" placeholder="First Name" />
               </div>
             </div>
             <div className="form-group">
               <label className="col-sm-2 control-label" htmlFor="petOwner">Pet Owner</label>
               <div className="col-sm-10">
                 <input type="text" className="form-control"
-                  id="petOwner" ref="inputLastName" placeholder="Last Name" />
+                  id="lastName" ref="inputLastName" placeholder="Last Name" />
               </div>
             </div>
             <div className="form-group">

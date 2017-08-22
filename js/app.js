@@ -1,9 +1,9 @@
 var Timeline = React.createClass({
     getInitialState(){
-        return {editing: false}
+        return {editing: false} //vertical timeline initial state
     },
     edit(){
-        this.setState({editing: true})
+        this.setState({editing: true}) //vertical timeline editing state
     },
     save(){
         var valTitle = this.refs.newTitle.value
@@ -11,11 +11,13 @@ var Timeline = React.createClass({
         alert('Later we will save this value: ' + valTitle)
         alert('We will also save this value: ' + valNote)
         this.setState({editing: false})
+        //vertical timeline save state
     },
     remove(){
         alert("Removing Note")
     },
     renderForm(){
+        //Medical note date & time stamp
         var dtime = new Date(),
             day = dtime.getDate(),
             month = dtime.toLocaleString("en", { month: "long"}),
@@ -23,6 +25,7 @@ var Timeline = React.createClass({
             hour = dtime.getHours(),
             minutes = dtime.getMinutes(),
             dte = hour + ":" + minutes + " " + day + " " + month + " " + year;
+        
         return (
             <div className="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
             <ul className="timeline timeline-centered">
