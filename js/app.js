@@ -43,6 +43,25 @@ var Timeline = React.createClass({
                 </li>
             </ul>
         </div>
+         <div className="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+            <ul className="timeline timeline-centered">
+                <li className="timeline-item">
+                    <div className="timeline-info">
+                        <span>{ dte }</span>
+                    </div>
+                    <div className="timeline-marker"></div>
+                    <div className="timeline-content">
+                        <h3 className="timeline-title">
+                            <textarea ref="newTitle"></textarea>
+                        </h3>
+                        <p>
+                            <textarea ref="newNote"></textarea>
+                        </p>
+                        <button onClick={this.save}> Save</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
         )
     },
     renderDisplay(){
@@ -55,6 +74,23 @@ var Timeline = React.createClass({
             dte = hour + ":" + minutes + " " + day + " " + month + " " + year;
         return (
                <div className="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+            <ul className="timeline timeline-centered">
+                <li className="timeline-item">
+                    <div className="timeline-info">
+                        <span>{ dte }</span>
+                    </div>
+                    <div className="timeline-marker"></div>
+                    <div className="timeline-content">
+                        <h3 className="timeline-title">Medical Note</h3>
+                        <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
+                            eu pede mollis pretium. Pellentesque ut neque.</p>
+                        <button onClick={this.edit}>EDIT</button>
+                        <button onClick={this.remove}>REMOVE</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+              <div className="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
             <ul className="timeline timeline-centered">
                 <li className="timeline-item">
                     <div className="timeline-info">
