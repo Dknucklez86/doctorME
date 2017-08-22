@@ -1,0 +1,15 @@
+{
+  "name": "week3",
+  "version": "1.0.0",
+  "description": "32549 Advanced Internet Programming Week 3 by Arsedian Ivanurrahman",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "0g": "^1.0.2",
+    "flow-bin": "^0.52.0"
+  }
+}
